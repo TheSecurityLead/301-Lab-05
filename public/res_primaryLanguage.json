@@ -39,8 +39,8 @@
         "startDate": "2023",
         "description": "Snake Game place holder",
         "images": [
-          "images/portfolio/photography/p1.jpg",
-          "images/portfolio/photography/p2.jpg"
+          "images/portfolio/snake/p1.jpg",
+          "images/portfolio/snake/p2.jpg"
         ],
         "url": "https://github.com",
         "technologies": [
