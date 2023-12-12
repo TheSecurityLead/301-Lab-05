@@ -19,12 +19,13 @@ class App extends Component {
   }
 
   applyPickedLanguage = (pickedLanguage, oppositeLangIconId) => {
-    this.swapCurrentlyActiveLanguage(oppositeLangIconId);
+    // this.swapCurrentlyActiveLanguage(oppositeLangIconId);
     document.documentElement.lang = pickedLanguage;
     var resumePath =
       document.documentElement.lang === window.$primaryLanguage
-        ? `res_primaryLanguage.json`
-        : `res_secondaryLanguage.json`;
+        ? `res_primaryLanguage.json`: "not found";
+        
+       // : `res_secondaryLanguage.json`;
     this.loadResumeFromPath(resumePath);
   }
 
@@ -33,9 +34,9 @@ class App extends Component {
       oppositeLangIconId === window.$primaryLanguageIconId
         ? window.$secondaryLanguageIconId
         : window.$primaryLanguageIconId;
-    document
+   /* document
       .getElementById(oppositeLangIconId)
-      .removeAttribute("filter", "brightness(40%)");
+      .removeAttribute("filter", "brightness(40%)"); */
     document
       .getElementById(pickedLangIconId)
       .setAttribute("filter", "brightness(40%)");
@@ -45,7 +46,7 @@ class App extends Component {
     this.loadSharedData();
     this.applyPickedLanguage(
       window.$primaryLanguage,
-      window.$secondaryLanguageIconId
+     // window.$secondaryLanguageIconId
     );
   }
 
